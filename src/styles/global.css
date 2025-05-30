@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@layer components {
+    .titleCard {
+        font-size: 24px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    @media(min-width: 640px) {
+        .titleCard{
+            font-size: 40px;
+            font-weight: 700;
+            padding-bottom: 20px;
+        }
+    }
+}
