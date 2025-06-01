@@ -10,13 +10,18 @@ const {jobs} = props;
 
 <div class="">
     {jobs.map((job) => (
-        <div class="sm:font-semibold sm:text-2xl sm:mb-1">{job.jobTitle}</div>
-        <div class="sm:text-2xl sm:mb-2">{job.company}</div>
-        <div class="sm:mb-2">{job.date}</div>
-        <div class="sm:text-lg text-gray-700 font-extralight">{job.jobDescriptions}</div>
-        <div class="sm:text-lg text-gray-700 font-extralight">
-            Check out the site: 
-            <a href={job.link} target="_blank" rel="noopener noreferrer" class="text-blue-800 font-normal underline">{job.linkText}</a>
+        <div class="mb-10">
+            <div class="font-semibold sm:text-2xl text-xl mb-1">{job.jobTitle}</div>
+            <div class="sm:text-2xl text-xl mb-2">{job.company}</div>
+            <div class="mb-2">{job.date}</div>
+            <ul class="sm:text-lg text-gray-700 font-extralight">{job.jobDescriptions.map((item) => (
+                <li>{item}</li>
+            ))}</ul>
+            {job.link && (<div class="sm:text-lg text-gray-700 font-extralight">
+                Check out the site: 
+                <a href={job.link} target="_blank" rel="noopener noreferrer" class="text-blue-800 font-normal underline">{job.linkText}</a>
+            </div>)}
+            
         </div>
 
     ))}
