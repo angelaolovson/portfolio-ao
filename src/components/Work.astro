@@ -8,13 +8,16 @@ const props = Astro.props as Props;
 const {jobs} = props;
 ---
 
-<div>
+<div class="">
     {jobs.map((job) => (
-        <div>{job.jobTitle}</div>
-        <div>{job.company}</div>
-        <div>{job.date}</div>
-        <div>{job.link}</div>
-        <div>{job.linkText}</div>
+        <div class="sm:font-semibold sm:text-2xl sm:mb-1">{job.jobTitle}</div>
+        <div class="sm:text-2xl sm:mb-2">{job.company}</div>
+        <div class="sm:mb-2">{job.date}</div>
+        <div class="sm:text-lg text-gray-700 font-extralight">{job.jobDescriptions}</div>
+        <div class="sm:text-lg text-gray-700 font-extralight">
+            Check out the site: 
+            <a href={job.link} target="_blank" rel="noopener noreferrer" class="text-blue-800 font-normal underline">{job.linkText}</a>
+        </div>
 
     ))}
 </div>
