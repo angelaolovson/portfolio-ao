@@ -6,6 +6,8 @@ import Layout from '../layouts/Layout.astro';
 import Name from '../components/Name.astro';
 import Work from '../components/Work.astro';
 import jobs from '../data/jobs';
+import Education from '~/components/Education.astro';
+import schools from '~/data/schools';
 ---
 
 <Layout>
@@ -19,7 +21,13 @@ import jobs from '../data/jobs';
 			<p class="titleCard">Work Experience</p>
 			<Work jobs={jobs} />
 		</section>
-		<p class="titleCard">Education</p>
+		<section>
+			<p class="titleCard">Education</p>
+			<Education schools={schools} />
+		</section>
+		<section></section>
+		<section></section>
+		
 		<p class="titleCard">Skills</p>
 		<p class="titleCard">Projects</p>
 	</main>	

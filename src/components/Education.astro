@@ -1,0 +1,19 @@
+---
+import type { School } from '~/types/school';
+
+type Props = {
+    schools: School[];
+}
+const props = Astro.props as Props;
+const {schools} = props;
+---
+
+<div>
+    {schools.map((school) => (
+        <div class="mb-10">
+            <div class="font-semibold sm:text-2xl text-xl mb-1">{school.program}</div>
+            <div class="sm:text-2xl text-xl mb-2">{school.schoolName}</div>
+            <div class="mb-2">{school.date}</div>
+        </div>
+    ))}
+</div>
