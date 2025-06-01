@@ -4,6 +4,8 @@ import Break from '../components/common/Break.astro';
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import Name from '../components/Name.astro';
+import Work from '../components/Work.astro';
+import jobs from '../data/jobs';
 ---
 
 <Layout>
@@ -13,11 +15,6 @@ import Name from '../components/Name.astro';
 		<Break />
 		<About />
 		<Break />
-		
-		<div>resume - work</div>
-		<div>resume - education</div>
-		<div>skills</div>
-		<div>Projects</div>
-		<div>maybe some blogs</div>
+		<Work jobs={jobs} />
 	</main>	
 </Layout>
