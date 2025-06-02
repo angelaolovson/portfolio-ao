@@ -8,7 +8,7 @@ export default function NevMenu() {
 
     return (
         <nav className="flex items-center justify-between h-20 md:h-30 relative z-10 w-full">
-            <div className="flex flex-1 md:flex-none justify-center p-3 items-center">
+            <div className="flex p-3">
                 <img src="/images/ao-logo.png" className="h-12 md:h-24 object-contain"/>
             </div>
             {/* Links for larger screen */}
