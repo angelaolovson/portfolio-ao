@@ -1,17 +1,17 @@
 ---
 import About from '../components/About.astro';
 import Break from '../components/common/Break.astro';
-import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 import Name from '../components/Name.astro';
 import Work from '../components/Work.astro';
 import jobs from '../data/jobs';
 import Education from '~/components/Education.astro';
 import schools from '~/data/schools';
+import NevMenu from '../components/NevMenu'
 ---
 
 <Layout>
-	<Header/>
+	<NevMenu />
 	<main class="flex flex-col sm:px-40 px-8">
 		<Name />
 		<Break />
