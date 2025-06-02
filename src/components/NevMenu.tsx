@@ -7,20 +7,23 @@ export default function NevMenu() {
     }
 
     return (
-        <nav className="flex gap-10 h-20 relative z-10">
-            <div>logo</div>
+        <nav className="flex items-center justify-between h-20 md:h-30 relative z-10 w-full">
+            <div className="flex flex-1 md:flex-none justify-center p-3 items-center">
+                <img src="/images/ao-logo.png" className="h-12 md:h-24 object-contain"/>
+            </div>
             {/* Links for larger screen */}
-            <div className="hidden lg:flex justify-end flex-1 px-2 ">
-                <ul>
-                    <li><a href="#about" >About</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#projects">Projects</a></li>
+            <div className="hidden md:flex flex-1 md:justify-center items-center px-2">
+                <ul className="md:flex md:gap-20 text-xl">
+                    <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="#about" >About</a></li>
+                    <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="#resume">Resume</a></li>
+                    <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="#projects">Projects</a></li>
+                    <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="https://www.linkedin.com/in/angela-olovson/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 </ul>
             </div>
             {/* Mobile * Menu Button*/}
-            <div className="sm:hidden">
+            <div className="md:hidden flex w-8">
                 <button
-                    className="btn bg-[#D9D9D9] text-[#163752] focus:bg-[#979696] focus:text-[#F0F0F0]"
+                    className="btn text-[#163752] text-4xl"
                     onClick={toggleMenu}
                     aria-label="Toggle navigation menu"
                     aria-expanded={isMobileMenuOpen}
@@ -32,11 +35,12 @@ export default function NevMenu() {
                 
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
-                    <div className="lg:hidden bg-[#D9D9D9] p-4 absolute top-full left-0 w-full z-50 shadow-md">
-                        <ul>
+                    <div className="md:hidden bg-white p-4 absolute top-full left-0 w-full z-50 shadow-md">
+                        <ul className="flex flex-col gap-5">
                             <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a></li>
                             <li><a href="#resume" onClick={() => setIsMobileMenuOpen(false)}>Resume</a></li>
                             <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
+                            <li><a href="https://www.linkedin.com/in/angela-olovson/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>LinkedIn</a></li>
                         </ul>
                     </div>
                 )}
