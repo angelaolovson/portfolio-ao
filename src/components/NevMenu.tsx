@@ -7,8 +7,8 @@ export default function NevMenu() {
     }
 
     return (
-        <nav className="flex items-center justify-between h-20 md:h-30 relative z-10 w-full">
-            <div className="flex p-3">
+        <nav className="flex items-center justify-between pl-3 h-20 md:h-30 relative z-10 w-full">
+            <div className="flex">
                 <img src="/images/ao-logo.png" className="h-12 md:h-24 object-contain"/>
             </div>
             {/* Links for larger screen */}
@@ -21,15 +21,29 @@ export default function NevMenu() {
                 </ul>
             </div>
             {/* Mobile * Menu Button*/}
-            <div className="md:hidden flex w-8">
+            <div className="md:hidden flex pr-3">
                 <button
-                    className="btn text-[#163752] text-4xl"
                     onClick={toggleMenu}
                     aria-label="Toggle navigation menu"
                     aria-expanded={isMobileMenuOpen}
+                    className="relative w-6 h-6 flex flex-col justify-between items-center z-50"
                 >
                     {/* Toggle between hamburger and x */}
-                    {isMobileMenuOpen ? "\u2715" : "\u2630"}{" "}
+                    <span
+                        className={`block h-0.5 w-full bg-[#163752] transform transition duration-300 ease-in-out origin-top-left ${
+                        isMobileMenuOpen ? "rotate-60 translate-y-[10px]" : ""
+                        }`}
+                    ></span>
+                    <span
+                        className={`block h-0.5 w-full bg-[#163752] transition-all duration-300 ease-in-out ${
+                        isMobileMenuOpen ? "opacity-0" : ""
+                        }`}
+                    ></span>
+                    <span
+                        className={`block h-0.5 w-full bg-[#163752] transform transition duration-300 ease-in-out origin-bottom-left ${
+                        isMobileMenuOpen ? "-rotate-60 -translate-y-[10px]" : ""
+                        }`}
+                    ></span>
                 </button>
 
                 
