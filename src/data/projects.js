@@ -1,0 +1,26 @@
+export default [
+    {
+        image:"/images/ora-screenshot.png",
+        projectTitle:"Ora – E-Commerce Website for a Flower Shop",
+        projectSubTitle:"Built to streamline online shopping, order tracking, and inventory management.",
+        liveDemoName:"Ora",
+        liveDemoLink:"https://capstone-ora-frontend.onrender.com/",
+        gitHubRepoLink:"https://github.com/angelaolovson/project4-ora-frontend",
+        description:"Designed and developed a full-stack e-commerce web app for a flower shop using React, Node.js, Express, and MongoDB. The platform allows customers to browse products, manage their cart, and securely check out with automatic inventory updates. Implemented full CRUD functionality for both users and administrators, including user account views, order summaries, and an admin dashboard for inventory management.",
+        myRole:"Solo Developer – Responsible for full UI/UX design, frontend and backend architecture, API integration, and deployment.",
+        keyChallenges:["Full CRUD operations on both frontend and backend","State management across cart and user sessions","RESTful API design with secure data handling", "Responsive design and mobile optimization"],
+        tools:"JavaScript • React • Express • Node.js • MongoDB • Postman • Bootstrap • CSS3",
+    },
+    // {
+    //     image:"",
+    //     projectTitle:"",
+    //     projectSubTitle:"",
+    //     liveDemoName:"",
+    //     liveDemoLink:"",
+    //     gitHubRepoLink:"",
+    //     description:"",
+    //     myRole:"",
+    //     keyChallenges:"",
+    //     tools:"",
+    // }, 
+]

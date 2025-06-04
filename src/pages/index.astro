@@ -8,6 +8,8 @@ import jobs from '../data/jobs';
 import Education from '~/components/Education.astro';
 import schools from '~/data/schools';
 import NevMenu from '../components/NevMenu'
+import projects from '~/data/projects';
+import Projects from '~/components/Projects.astro';
 ---
 
 <Layout>
@@ -32,6 +34,7 @@ import NevMenu from '../components/NevMenu'
 		<Break />
 		<section>
 			<p class="titleCard">Projects</p>
+			<Projects projects={projects} />
 		</section>
 	</main>	
 </Layout>

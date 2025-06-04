@@ -1,0 +1,19 @@
+---
+import type { Project } from '~/types/project'
+type Props = {
+    projects: Project[];
+};
+const props = Astro.props as Props;
+const {projects} = props;
+---
+
+<div>
+    {projects.map((project) => (
+        <div>
+            <img src={project.image}/>
+        </div>
+        <div>
+            {project.projectTitle}
+        </div>
+    ))}
+</div>
