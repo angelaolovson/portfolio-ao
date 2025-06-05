@@ -1,0 +1,14 @@
+---
+import type { Project } from '~/types/project';
+const {project} = Astro.props as { project:Project};
+const {liveDemoLink , gitHubRepoLink} = project;
+---
+<div class="flex mb-10 gap-2">
+    <div class="">Go to project 》</div>
+    <div>
+        <a href={liveDemoLink} target="_blank" rel="noopener noreferrer" class="text-blue-800 font-normal underline">Live Demo</a>
+    </div>
+    <div>
+        <a href={gitHubRepoLink} target="_blank" rel="noopener noreferrer" class="text-blue-800 font-normal underline">GitHub Repo</a>
+    </div>
+</div>
