@@ -10,6 +10,7 @@ import schools from '~/data/schools';
 import NevMenu from '../components/NevMenu'
 import projects from '~/data/projects';
 import Projects from '~/components/Projects.astro';
+import Footer from '~/components/Footer';
 ---
 
 <Layout>
@@ -36,5 +37,6 @@ import Projects from '~/components/Projects.astro';
 			<p class="titleCard">Projects</p>
 			<Projects projects={projects} />
 		</section>
-	</main>	
+	</main>
+	<Footer />
 </Layout>
