@@ -11,6 +11,8 @@ import NevMenu from '../components/NevMenu'
 import projects from '~/data/projects';
 import Projects from '~/components/Projects.astro';
 import Footer from '~/components/Footer';
+import Skills from '~/components/Skills.astro';
+import skills from '~/data/skills';
 ---
 
 <Layout>
@@ -31,6 +33,7 @@ import Footer from '~/components/Footer';
 		<Break />
 		<section>
 			<p class="titleCard">Skills</p>
+			<Skills skills={skills} />
 		</section>
 		<Break />
 		<section id="projects">
