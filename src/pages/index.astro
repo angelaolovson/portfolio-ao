@@ -14,7 +14,7 @@ import Projects from '~/components/Projects.astro';
 
 <Layout>
 	<NevMenu client:load/>
-	<main class="flex flex-col sm:px-40 px-8">
+	<main class="flex flex-col sm:px-20 px-8">
 		<Name />
 		<Break />
 		<About />
@@ -32,7 +32,7 @@ import Projects from '~/components/Projects.astro';
 			<p class="titleCard">Skills</p>
 		</section>
 		<Break />
-		<section>
+		<section id="projects">
 			<p class="titleCard">Projects</p>
 			<Projects projects={projects} />
 		</section>
