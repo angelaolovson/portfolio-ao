@@ -19,10 +19,14 @@ const {projects} = props;
             <div class="font-semibold md:text-2xl text-xl mb-1">{project.projectTitle}</div>
             <div class="font-light md:text-lg mb-2 italic">{project.projectSubTitle}</div>
             <ProjectLinks project={project} />
-            <ContentTitleInfo contentTitle="Description" contentInfo={project.description} />          
-            <ContentTitleInfo contentTitle="My Role" contentInfo={project.myRole} />          
-            <ContentTitleInfo contentTitle="Key Challenges" contentInfo={project.keyChallenges} />          
-            <ContentTitleInfo contentTitle="Tools" contentInfo={project.tools} />          
+            {[
+                {title:"Description", info:project.description},
+                {title:"My Role", info:project.myRole},
+                {title:"Key Challenges", info:project.keyChallenges},
+                {title:"Tools", info:project.tools},
+            ].map(({title, info}) => (
+                <ContentTitleInfo contentTitle={title} contentInfo={info} />
+            ))}       
         </div>
     ))}
 </div>
