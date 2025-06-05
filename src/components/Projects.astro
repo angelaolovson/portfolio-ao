@@ -10,23 +10,26 @@ const props = Astro.props as Props;
 const {projects} = props;
 ---
 
-<div class="flex md:flex-row flex-col gap-10">
+<div class="flex flex-col gap-20">
     {projects.map((project) => (
-        <div class="md:w-1/2">
-            <img src={project.image}/>
+        <div class="flex md:flex-row flex-col md:gap-20 gap-10">
+            <div class="md:w-1/2 ">
+                <img src={project.image} class="rounded-lg shadow-xl"/>
+            </div>
+            <div class="md:w-1/2">
+                <div class="font-semibold md:text-2xl text-xl mb-1">{project.projectTitle}</div>
+                <div class="font-light md:text-lg mb-2 italic">{project.projectSubTitle}</div>
+                <ProjectLinks project={project} />
+                {[
+                    {title:"Description", info:project.description},
+                    {title:"My Role", info:project.myRole},
+                    {title:"Key Challenges", info:project.keyChallenges},
+                    {title:"Tools", info:project.tools},
+                ].map(({title, info}) => (
+                    <ContentTitleInfo contentTitle={title} contentInfo={info} />
+                ))}       
+            </div>
         </div>
-        <div class="md:w-1/2">
-            <div class="font-semibold md:text-2xl text-xl mb-1">{project.projectTitle}</div>
-            <div class="font-light md:text-lg mb-2 italic">{project.projectSubTitle}</div>
-            <ProjectLinks project={project} />
-            {[
-                {title:"Description", info:project.description},
-                {title:"My Role", info:project.myRole},
-                {title:"Key Challenges", info:project.keyChallenges},
-                {title:"Tools", info:project.tools},
-            ].map(({title, info}) => (
-                <ContentTitleInfo contentTitle={title} contentInfo={info} />
-            ))}       
-        </div>
+        
     ))}
 </div>
