@@ -22,18 +22,20 @@ import skills from '~/data/skills';
 		<Break />
 		<About />
 		<Break />
-		<section id="resume">
-			<p class="titleCard">Work Experience</p>
-			<Work jobs={jobs} />
-		</section>
-		<section>
-			<p class="titleCard">Education</p>
-			<Education schools={schools} />
-		</section>
-		<Break />
-		<section>
-			<p class="titleCard">Skills</p>
-			<Skills skills={skills} />
+		<section class="sm:px-10 md:px-15 lg:px-30">
+			<div id="resume">
+				<p class="titleCard">Work Experience</p>
+				<Work jobs={jobs} />
+			</div>
+			<div>
+				<p class="titleCard">Education</p>
+				<Education schools={schools} />
+			</div>
+			<Break />
+			<div>
+				<p class="titleCard">Skills</p>
+				<Skills skills={skills} />
+			</div>
 		</section>
 		<Break />
 		<section id="projects">
