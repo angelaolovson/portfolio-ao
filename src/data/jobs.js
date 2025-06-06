@@ -11,7 +11,8 @@ export default [
         jobTitle:"Software Engineering Fellow", 
         company:"General Assembly, Remote", 
         date:"Jan 2023 - Present",
-        jobDescriptions:["Details in Projects"],
+        link:"#projects",
+        isProject: true,
     },
     {
         jobTitle:"Senior Allocation Analyst", 
