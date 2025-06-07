@@ -26,22 +26,22 @@ export default function NevMenu() {
                     onClick={toggleMenu}
                     aria-label="Toggle navigation menu"
                     aria-expanded={isMobileMenuOpen}
-                    className="relative w-6 h-6 flex flex-col justify-between items-center z-50"
+                    className="relative w-8 h-8 flex flex-col justify-center items-center z-50 overflow-visible"
                 >
                     {/* Toggle between hamburger and x */}
                     <span
-                        className={`block h-0.5 w-full bg-[#163752] transform transition duration-300 ease-in-out origin-top-left ${
-                        isMobileMenuOpen ? "rotate-60 translate-y-[10px]" : ""
+                        className={`block absolute w-6 h-0.5 bg-[#163752] transition-transform duration-300 ease-in-out ${
+                            isMobileMenuOpen ? "rotate-45" : "-translate-y-2"
                         }`}
                     ></span>
                     <span
-                        className={`block h-0.5 w-full bg-[#163752] transition-all duration-300 ease-in-out ${
-                        isMobileMenuOpen ? "opacity-0" : ""
+                        className={`block absolute w-6 h-0.5 bg-[#163752] transition-opacity duration-300 ease-in-out ${
+                            isMobileMenuOpen ? "opacity-0" : ""
                         }`}
                     ></span>
                     <span
-                        className={`block h-0.5 w-full bg-[#163752] transform transition duration-300 ease-in-out origin-bottom-left ${
-                        isMobileMenuOpen ? "-rotate-60 -translate-y-[10px]" : ""
+                        className={`block absolute w-6 h-0.5 bg-[#163752] transition-transform duration-300 ease-in-out ${
+                            isMobileMenuOpen ? "-rotate-45" : "translate-y-2"
                         }`}
                     ></span>
                 </button>
