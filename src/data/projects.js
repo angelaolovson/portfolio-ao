@@ -40,7 +40,7 @@ export default [
         gitHubRepoLink:"https://github.com/angelaolovson/Tamapotchi",
         description:"My first project—a plant-care game built with vanilla JavaScript, HTML, and CSS. Players keep a virtual plant alive by balancing sunlight, water, fertilizer, and pesticide. Includes interactive buttons, animated feedback, and timed events for plant growth and health.",
         myRole:"Solo Developer – Designed gameplay mechanics, built all UI and animations, and implemented game logic using JavaScript timers and conditionals.",
-        keyChallenges:["Managing real-time game state with setInterval","CCreating animated, responsive interactions with vanilla JS","Balancing game rules for win/loss conditions"],
+        keyChallenges:["Managing real-time game state with setInterval","Creating animated, responsive interactions with vanilla JS","Balancing game rules for win/loss conditions"],
         tools:"JavaScript • HTML5 • CSS3 • Photoshop",
     }, 
 ]
