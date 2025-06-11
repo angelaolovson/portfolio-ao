@@ -18,6 +18,7 @@ export default function NevMenu() {
                     <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="#resume">Resume</a></li>
                     <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="#projects">Projects</a></li>
                     <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="https://www.linkedin.com/in/angela-olovson/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li className=" hover:text-amber-500 hover:underline decoration-amber-500 underline-offset-4 decoration-double"><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             {/* Mobile * Menu Button*/}
@@ -55,6 +56,7 @@ export default function NevMenu() {
                             <li><a href="#resume" onClick={() => setIsMobileMenuOpen(false)}>Resume</a></li>
                             <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
                             <li><a href="https://www.linkedin.com/in/angela-olovson/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>LinkedIn</a></li>
+                            <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
                         </ul>
                     </div>
                 )}
