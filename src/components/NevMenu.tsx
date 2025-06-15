@@ -7,9 +7,9 @@ export default function NevMenu() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 flex bg-white shadow-sm items-center justify-between pl-3 h-20 md:h-30 z-10 w-full">
+        <nav className="fixed top-0 left-0 flex bg-white shadow-sm items-center justify-between pl-3 h-15 md:h-25 z-10 w-full">
             <div className="flex">
-                <img src="/images/ao-logo.png" className="h-12 md:h-24 object-contain"/>
+                <img src="/images/ao-logo-web.png" className="h-10 md:h-16 object-contain"/>
             </div>
             {/* Links for larger screen */}
             <div className="hidden md:flex flex-1 md:justify-center items-center px-2">
